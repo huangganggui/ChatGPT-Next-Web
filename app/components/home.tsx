@@ -28,6 +28,7 @@ import { useAppConfig } from "../store/config";
 import { AuthPage } from "./auth";
 import { getClientConfig } from "../config/client";
 import { api } from "../client/api";
+import { AdsSideBar } from "./ads-sidebar";
 
 export function Loading(props: { noLogo?: boolean }) {
   return (
@@ -180,6 +181,7 @@ export function Home() {
   return (
     <ErrorBoundary>
       <Router>
+        <AdsSideBar />
         <Screen />
       </Router>
     </ErrorBoundary>
