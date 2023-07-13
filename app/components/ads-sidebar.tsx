@@ -17,7 +17,7 @@ export function AdsSideBar(props: { className?: string }) {
   }, []);
 
   return (
-    <div style={{ width: 260, height: 300 }}>
+    <>
       {window.innerWidth < 640 ? null : (
         <ins
           className="adsbygoogle"
@@ -28,6 +28,6 @@ export function AdsSideBar(props: { className?: string }) {
           data-full-width-responsive="true"
         />
       )}
-    </div>
+    </>
   );
 }
