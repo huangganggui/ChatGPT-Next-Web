@@ -183,6 +183,7 @@ export function Home() {
       <Router>
         <AdsSideBar />
         <Screen />
+        <AdsSideBar />
       </Router>
     </ErrorBoundary>
   );
