@@ -17,13 +17,17 @@ export function AdsSideBar(props: { className?: string }) {
   }, []);
 
   return (
-    <ins
-      className="adsbygoogle"
-      style={{ width: 260, height: 300 }}
-      data-ad-client="ca-pub-2165739551283251"
-      data-ad-slot="7007478358"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    />
+    <div style={{ width: "auto", height: "auto" }}>
+      {window.innerWidth < 640 ? null : (
+        <ins
+          className="adsbygoogle"
+          style={{ width: 260, height: 300 }}
+          data-ad-client="ca-pub-2165739551283251"
+          data-ad-slot="7007478358"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
+      )}
+    </div>
   );
 }
