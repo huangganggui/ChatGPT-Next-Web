@@ -11,6 +11,7 @@ import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
 import { WechatContant } from "./wechat-contant";
+import { Donate } from "./donate";
 
 import Locale from "../locales";
 
@@ -175,6 +176,9 @@ export function SideBar(props: { className?: string }) {
           </div>
           <div className={styles["sidebar-action"]}>
             <WechatContant />
+          </div>
+          <div className={styles["sidebar-action"]}>
+            <Donate />
           </div>
         </div>
         <div>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { IconButton } from "./button";
-import WechatIcon from "../icons/contact.svg";
-import wechatCode from "../imgs/my-wechat.jpg";
+import WechatIcon from "../icons/donate.svg";
+import wechatCode from "../imgs/donate.jpg";
 import Image from "next/image";
 
 import Button from "@mui/material/Button";
@@ -13,7 +13,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-export function WechatContant(props: { className?: string }) {
+export function Donate(props: { className?: string }) {
   const [open, setOpen] = useState(false);
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -35,11 +35,9 @@ export function WechatContant(props: { className?: string }) {
         onClose={handleClose}
         aria-labelledby="responsive-dialog-title"
       >
-        <DialogTitle id="responsive-dialog-title">{"加入群聊"}</DialogTitle>
+        <DialogTitle id="responsive-dialog-title">{"捐赠"}</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            添加微信好友后发送 “gpt” 等待客服拉群
-          </DialogContentText>
+          <DialogContentText>微信扫一扫</DialogContentText>
           <Image src={wechatCode} alt="My Image" width={300} />
         </DialogContent>
         <DialogActions>
