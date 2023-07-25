@@ -135,13 +135,14 @@ export const useAppConfig = create<ChatConfigStore>()(
       },
 
       allModels() {
+        const filterNames = ["gpt-4-0314", "gpt-3.5-turbo"];
         const customModels = get()
           .customModels.split(",")
           .filter((v) => !!v && v.length > 0)
           .map((m) => ({ name: m, available: true }));
 
         const models = get().models.concat(customModels);
-        return models;
+        return models.filter((m) => filterNames.includes(m.name));
       },
     }),
     {
