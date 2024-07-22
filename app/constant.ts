@@ -89,6 +89,10 @@ export const DEFAULT_MODELS = [
     available: true,
   },
   {
+    name: "gpt-4o-mini-2024-07-18",
+    available: true,
+  },
+  {
     name: "gpt-3.5-turbo",
     available: true,
   },
